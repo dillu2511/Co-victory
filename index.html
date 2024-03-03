@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Dashboard-Co-Victory</title>
+    <?php include 'link/links.php'; ?>
+    <?php include 'css/style.php'; ?>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand ps-3" href="index.html"></a>
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
+            <i class="fas fa-bars"></i>
+        </button>
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user fa-fw"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="pic.php">Profile</a></li>
+                    <li><a class="dropdown-item" href="setting.php">Settings</a></li>
+                    <li><a class="dropdown-item" href="activity.php">Activity Log</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- Rest of your HTML body content goes here -->
+</body>
+</html>
+
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="Dashboard.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <!--<div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Layouts
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                </nav>
+                            </div>-->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pages
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Authentication
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">                                          
+                                            <a class="nav-link" href="News.php">News</a>
+                                            <a class="nav-link" href="contact us .php">contact us</a>
+                                            <a class="nav-link" href="Gallary.php">Gallary</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+                </nav>
+            </div>
+            
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+    </body>
+</html>
+<nav class="navbar navbar-expand-lg nav_style p-1">
+  <div class="container-fluid">
+    <a class="navbar-brand pl-5" href="#"><h5>C<span class="corona_rot"><img src="images/corona.png" height="20px" width="20px" style="position: sticky;"></span>VICTORY</h5></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto pr-5 text-capitalize">
+        <li class="nav-item active">
+          <a class="nav-link" href="Index.php">Home <span class="sr-only">(current)
+          </span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Your Health.php">Your Health</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Take Action.php">Take Action</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Symptoms Causes.php">Symptoms Causes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Diagnosis Treatment.php">Diagnosis Treatment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Doctors.php">Doctors</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<div class="main_header">
+    <div class="row w-100 h-100">
+        <div class="col-lg-5 col-md col-12 order-lg-1 order-2">
+            <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
+                <img src="images/partner.png" width="300" height="300">
+            </div>
+        </div>
+        <div class="col-lg-7 col-12 order-1">
+            <div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+                <h1>Let's Stay & Fight Together Against Cor<span class="corona_rot"><img src="images/corona.png" width="65px" height="60px"></span>na Virus</h1>
+ 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- *****************************  corona update  ***************-->
+<section class="corona_update">
+    <div class="mb-3">
+        <h3 class="text-uppercase text-center">Covid-19 updates</h3>
+    </div>
+    <div class="d-flex justify-content-around align-items-center count_style">
+        <div>
+            <h1 class="count">1,524,266</h1>
+            <p>passangers screened at airport</p>
+        </div>
+        <div>
+            <h1 class="count">512</h1>
+            <p>About COVID-19 cases*</p>
+    </div>
+    <div>
+    <h1 class="count">40</h1>
+    <p>Cured/discharged cases</p>
+    </div>
+    <div>
+    <h1 class="count">9</h1>
+    <p>Death cases</p>
+    </div>
+    </div>
+</section>
+
+<!-- *********about section  ***********-->
+    <div class="container-fluid sub_section pt-5 pb-5 " id="aboutid">
+        <div class="section_header text-center mb-5 mt-4">
+            <h1>About COVID-19</h1>
+        </div> 
+    <div class="row pt-5">
+    <div class="col-lg-5 col-md-6 col-12 ml-5 about_res">
+        <img src="images/covid-19.jpg" width="600px" class="img-fluid">
+    </div>
+    <div class="col-lg-6 col-12">
+        <h3>What is COVID-19(Corona-Virus)</h3>
+        <p>COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and diseas re unknown before the outbreak began in Wuhan, China, in December 2019.</p>
+        <p>Coronaviruses are large family of viruses which may cause iness in animals or humans. In humans, several coronaviruses are known to couse respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome MESS and Severe Acute Respiratory Syndrome (SARS). The most recently discovered  coronavirus causes coronavirus didease COVID-19.</p>
+    </div>
+</div>
+</div>
+
+<!--////////////////////////// coronavirus symtoms ////////////////////////-->
+
+<div class="container-fluid pt-5 " id="sympid">
+  <div class="section_header text-center mb-5 mt-0">
+    <h1> Coronavirus symtoms</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <figure class="text-center">
+          <img src="images/cough.png" class="img-fluid" width="120" height="120">
+          <figcaption>cough</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <figure class="text-center">
+          <img src="images/runny-nose.png" class="img-fluid" width="120" height="120">
+          <figcaption>runny nose</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <figure class="text-center">
+          <img src="images/fever.png" class="img-fluid" width="120" height="120">
+          <figcaption>fever</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <figure class="text-center">
+          <img src="images/cold.png" class="img-fluid" width="120" height="120">
+          <figcaption>cold</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <figure class="text-center">
+          <img src="images/nap.png" class="img-fluid" width="120" height="120">
+          <figcaption>tiredness</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <figure class="text-center">
+          <img src="images/sans.png" class="img-fluid" width="120" height="120">
+          <figcaption>difficult breathing (severe cases)</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ////////////////////Prevention Against coronavirus //////////////////////////// -->
+
+<div class="container-fluid sub_section pt-5 pb-5"  id="preventid">
+  <div class="section_header text-center mb-5 mt-4">
+    <h1>6 Steps Prevention Against Coronavirus </h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+          <figure>
+          <img src="images/handwash.png" class="img-fluid" width="90" height="90">
+        </figure>
+          </div>
+
+          <div class="col-lg-8 col-md-8 col-12">
+            <p>wash your hands regularly 
+            for 20 seconds, with soap
+            and water or alcohol-based
+            hand rub</p>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+          <figure class="text-center">
+          <img src="images/mask.png" class="img-fluid" width="90" height="90">
+        </figure>
+          </div>
+
+          <div class="col-lg-8 col-md-8 col-12">
+            <p>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</p>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+          <figure class="text-center">
+          <img src="images/distance.png" class="img-fluid" width="90" height="90">
+        </figure>
+          </div>
+
+          <div class="col-lg-8 col-md-8 col-12">
+            <p>Avoid close contact (1 meter 3 feet) with people who are unwell</p>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+          <figure class="text-center">
+          <img src="images/stay-at-home.png" class="img-fluid" width="90" height="90">
+        </figure>
+          </div>
+
+          <div class="col-lg-8 col-md-8 col-12">
+            <p>Stay home and self-isolate from others in the household if you feel unwell</p>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+          <figure class="text-center">
+          <img src="images/news-report.png" class="img-fluid" width="90" height="90">
+        </figure>
+          </div>
+
+          <div class="col-lg-8 col-md-8 col-12">
+            <p>Stay informed by watching news & follow the recommended practices</p>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+          <figure class="text-center">
+          <img src="images/checkup.png" class="img-fluid" width="90" height="90">
+        </figure>
+          </div>
+
+          <div class="col-lg-8 col-md-8 col-12">
+            <p>If you have fever, cough and difficulty breathing, seek medical care early</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!--///////////////////////////////   top cursor  /////////////////////////////-->
+  
+<div class="container scrolltop float-right pr-5">
+  <i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"></i>
+</div>
+
+  <!--///////////////////////////////   footer   /////////////////////////////-->
+
+  <div class="container-fluid sub_section pt-5 pb-5"  id="preventid">
+  <div class="section_header text-center mb-5 mt-4">
+    <h1>WHAT DOCTORS SAY.. </h1>
+  </div>
+
+  <div class="doctors">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center ">
+                  </div>
+               </div>
+            </div>
+            <div class="row d_flex">
+               <div class=" col-md-6">
+                     <div id="ho_efcet" class="reader text_align_center">
+                        <!--<i><img src="images/doctor1.png" alt="#"/></i>-->
+                        <h3>You should do</h3>
+                        <pre align="justify" style="font-size: large;">
+
+               Stay at home
+               Wear mask
+               Use Sanitizer
+               Disinfect your home
+               Wash your hands
+               Frequent self-isolation 
+                          </pre>        
+                        <!--<span><img src="images/do.png" alt="#"/></span>-->
+                     </div>
+                  </div>
+               <div class=" col-md-6">
+                      <div id="ho_efcet" class="reader text_align_center">
+                        <!--<i><img src="images/doctor2.png" alt="#"/></i>-->
+                        <h3>You should avoid</h3>
+                        <pre align="justify" style="font-size: large;">
+
+               Avoid infected people
+               Avoid animals
+               Avoid handshaking
+               Aviod infected surfaces
+               Don't touch your face
+               Avoid droplets
+                        </pre>
+                        <!--<span><img src="images/do.png" alt="#"/></span>-->
+                     </div>
+                  </div>
+               </div>
+         </div>
+      </div>
+<!-- Update your existing form with this code -->
+<div class="update">
+    <div class="cevery_white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Get Every Update.... </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cevery_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form id="subscriptionForm" class="form_subscri" method="POST" action="process_subscription.php">
+    <input class="newsl" placeholder="Your Email" type="email" name="email" required>
+    <button type="submit" class="subsci_btn" name="subscribe">Subscribe Now</button>
+</form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Resources</h3>
+                              <ul class="menu_footer">
+                                 <li><a href="index.php">Home</a><li>
+                                 <li><a href="javascript:void(0)">What we do</a><li>
+                                 <li> <a href="javascript:void(0)">Media</a><li>
+                                 <li> <a href="javascript:void(0)">Travel Advice</a><li>
+                                 <li><a href="javascript:void(0)">Protection</a><li>
+                                 <li><a href="javascript:void(0)">Care</a><li>
+                              </ul>
+                             
+           
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                             <h3>About</h3>
+                              <p>We are a group of dedicated volunteers who curate and verify the data coming from several sources. We extract the details, like a patient's relationship with other patients to identify local and community transmissions, travel history and status.</p>
+                           </div>
+                        </div>
+                     
+                
+                       
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="hedingh3  text_align_left">
+                              <h3>Contact  Us</h3>
+                                <ul class="top_infomation">
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                           NSTI Howrah, Dasnagar-711105  
+                        </li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>
+                           Call : +91 7678483708
+                        </li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                           <a href="Javascript:void(0)">rajukumar87859@gmail.com</a>
+                        </li>
+                     </ul>
+                            
+                           
+                     </div>
+                  </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Countries</h3>
+                              <div class="map">
+                                <img src="images/map.png" alt="#"/>
+                              </div>
+                           </div>
+                        </div>
+                    
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p> 2023 All Rights Reserved.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+<!-- jQuery and Bootstrap JS -->
+<script type="text/javascript">
+  $('.count').counterup({
+    delay: 10,
+    times: 3000
+  });
+</script>
+
+<script type="text/javascript">
+  mybutton = document.getElementById("myBtn");
+
+  // when the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // when the user clicks on the button, scroll to the top of the document
+  function topfunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  }
+</script>
+
+<!--<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "0886d97b-5135-4b2a-b247-e0679a100265", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "6d7f019d-9b43-411a-b1cf-734294301d19", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>-->
+
+</body>
+</html>
+
+<?php
+
+include 'dbcon.php';
+
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $symp = $_POST['coronasym'];
+    $msg = $_POST['msg'];
+
+    $chk = "";
+
+    foreach ($symp as $chk1) {
+        $chk .= $chk1 . ",";
+    }
+
+    $insertquery = "INSERT INTO coronacase (username, email, mobile, symp, message) 
+                    VALUES ('$username', '$email', '$mobile', '$chk', '$msg')";
+
+    $query = mysqli_query($con, $insertquery);
+
+    if ($query) {
+        echo "Data inserted successfully";
+    } else {
+        echo "Error: " . mysqli_error($con);
+    }
+}
+
+?>
+
+

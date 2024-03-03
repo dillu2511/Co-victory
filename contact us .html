@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <?php  include 'link/links.php'; ?>
+    <?php  include 'css/style.php'; ?>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg nav_style p-1">
+  <div class="container-fluid">
+    <a class="navbar-brand pl-5" href="#"><h5>C<span class="corona_rot"><img src="images/corona.png" height="20px" width="20px" style="position: sticky;"></span>VICTORY</h5></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto pr-5 text-capitalize">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.php">Home <span class="sr-only">(current)
+          </span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Your Health.php">Your Health</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Take Action.php">Take Action</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Symptoms Causes.php">Symptoms Causes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Diagnosis Treatment.php">Diagnosis Treatment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Doctors.php">Doctors</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<!-- ///////////////////  Contact Us ASAP //////////////////////////// -->
+
+<div class="container-fluid pt-5 pb-5"  id="contactid">
+  <div class="section_header text-center mb-5 mt-4">
+    <h1> Contact Us  </h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-12">
+
+      <form action="" method="POST">
+
+      <div class="form-group">
+    <label>Username</label>
+    <input type="text" class="form-control" name="username" placeholder="name" autocomplete="off" required>
+  </div>
+
+      <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" name="email" placeholder="name@example.com" autocomplete="off" required>
+  </div>
+
+  <div class="form-group">
+    <label>mobile</label>
+    <input type="number" class="form-control" name="mobile" placeholder="mobile" autocomplete="off" required>
+  </div>
+  
+  <div class="form-group">
+    <label>Select Symptoms</label><br>
+
+    <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+        <input type="checkbox" class="custom-control-input" id="customcheckbox1" name="coronasym[]" value="cold">
+        <label class="custom-control-label" for="customcheckbox1">Cold</label>
+    </div>
+
+    <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+        <input type="checkbox" class="custom-control-input" id="customcheckbox2" name="coronasym[]" value="fever">
+        <label class="custom-control-label" for="customcheckbox2">Fever</label>
+    </div>
+
+    <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+        <input type="checkbox" class="custom-control-input" id="customcheckbox3" name="coronasym[]" value="breath">
+        <label class="custom-control-label" for="customcheckbox3">Difficulty in breath</label>
+    </div>
+
+    <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+        <input type="checkbox" class="custom-control-input" id="customcheckbox4" name="coronasym[]" value="tired">
+        <label class="custom-control-label" for="customcheckbox4">Feeling weak</label>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="msg"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" name="submit">submit</button>
+</form>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Resources</h3>
+                              <ul class="menu_footer">
+                                 <li><a href="index.html">Home</a><li>
+                                 <li><a href="javascript:void(0)">What we do</a><li>
+                                 <li> <a href="javascript:void(0)">Media</a><li>
+                                 <li> <a href="javascript:void(0)">Travel Advice</a><li>
+                                 <li><a href="javascript:void(0)">Protection</a><li>
+                                 <li><a href="javascript:void(0)">Care</a><li>
+                              </ul>
+                             
+           
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                             <h3>About</h3>
+                              <p>We are a group of dedicated volunteers who curate and verify the data coming from several sources. We extract the details, like a patient's relationship with other patients to identify local and community transmissions, travel history and status.</p>
+                           </div>
+                        </div>
+                     
+                
+                       
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="hedingh3  text_align_left">
+                              <h3>Contact  Us</h3>
+                                <ul class="top_infomation">
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                           NSTI Howrah, Dasnagar-711105  
+                        </li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>
+                           Call : +91 7678483708
+                        </li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                           <a href="Javascript:void(0)">rajukumar87859@gmail.com</a>
+                        </li>
+                     </ul>
+                            
+                           
+                     </div>
+                  </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Countries</h3>
+                              <div class="map">
+                                <img src="images/map.png" alt="#"/>
+                              </div>
+                           </div>
+                        </div>
+                    
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p> 2023 All Rights Reserved.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
