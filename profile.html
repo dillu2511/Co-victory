@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php"); // Redirect to the login page if not logged in
+    header("Location: login.html"); // Redirect to the login page if not logged in
     exit();
 }
 
@@ -30,9 +30,9 @@ $row = mysqli_fetch_assoc($result);
     <title>Profile</title>
 </head>
 <body>
-    <h2>Welcome, <?php echo $row['username']; ?>!</h2>
-    <p>Email: <?php echo $row['email']; ?></p>
+    <h2>Welcome, [Username]!</h2>
+    <p>Email: [Email]</p>
 
-    <a href="logout.php">Logout</a>
+    <a href="logout.html">Logout</a>
 </body>
 </html>
