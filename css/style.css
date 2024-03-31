@@ -377,7 +377,10 @@ padding: 80px 0;
     width: 120px;
     height: 121px;
 }
-.nostrud {position:relative;}
+.nostrud {
+    position:relative;
+}
+
 .nostrud::before {
     position: absolute;
     content: "";
@@ -389,3 +392,4 @@ padding: 80px 0;
     height: 81px;
     text-align: center;
     margin: 0 auto;
+}
