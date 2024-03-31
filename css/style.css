@@ -1,116 +1,127 @@
-<style type="text/css">
-    html{
-        scroll-behavior: smooth;
-    }
-    *{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Mooli', 
-        sans-serif; }
+html {
+    scroll-behavior: smooth;
+}
 
-        .row{ margin-left: 0!important; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mooli', sans-serif;
+}
 
-.nav_style{
+.row {
+    margin-left: 0!important;
+}
+
+.nav_style {
     background-color: #a29bfe!important;
 }
-.nav_style a{
+
+.nav_style a {
     color: white;
 }
 /*//////////////////////  main header //////////////*/
-.main_header{
+.main_header {
     height: 450px;
     width: 100%;
 }
-.corona_rot img{
+
+.corona_rot img {
     animation: gocorona 3s linear infinite;
 }
-@keyframes gocorona{
-    0% { tranform: rotate(0); }
+
+@keyframes gocorona {
+    0% { transform: rotate(0); }
     100% { transform: rotate(360deg); }
 }
-.leftside img{ animation: heartbeat 5s linear infinite; }
-@keyframes heartbeat
-{
-0%
-{
-transform: scale( .75 );
+/* Other CSS rules... */
+
+.leftside img {
+    animation: heartbeat 5s linear infinite;
 }
-20%
-{
-transform:scale( 1 );
-}
-40%
-{
-transform: scale( .75 );
-}
-60%
-{
-transform:scale( 1 );
-}
-80%
-{
-transform: scale( .75 );
-}
-100%
-{
-    transform: scale( .75 );    
-}
+
+@keyframes heartbeat {
+    0% { transform: scale( .75 ); }
+    20% { transform: scale( 1 ); }
+    40% { transform: scale( .75 ); }
+    60% { transform: scale( 1 ); }
+    80% { transform: scale( .75 ); }
+    100% { transform: scale( .75 ); }
 }
 /******************  corona update  ******************/
-.corona_update{
+.corona_update {
     margin: 0 0 30px 0;
 }
-.corona_update h3{color: #ff7675;}
-.corona_update h1{ font-size: 2rem; text-align: center; }
 
+.corona_update h3 {
+    color: #ff7675;
+}
+
+.corona_update h1 {
+    font-size: 2rem;
+    text-align: center;
+}
 /*/////////////////////////// about section //////////////////////////*/
 
-.sub_section{
+.sub_section {
     background-color: #fbfafd;
 }
 /*//////////////////  footer  /////////////////////*/
-.footer_style{
+.footer_style {
     background-color: #a29bfe!important;
 }
-.footer_style p{
+
+.footer_style p {
     margin-bottom: 0!important;
 }
 
 /*//////////////// top scroll //////////////////*/
 
-#myBtn{
-    display:none; /* Hidden by default */
-    position: fixed; /* Fixed/stickey position */
-    bottom: 30px; /* place the button at the bottom of the page */
-    right: 40px; /* place the button 30px from the page */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove border */
-    outline: none; /* Remove outline */
-    background-color: #00A8FF; /* set a background color */
-    color: white; /* Remove outline */
-    cursor: pointer; /* add a mouse pointer on hover */
-    padding: 10px; /* some padding */
-    border-radius: 10px; /* Rounded corners */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #00A8FF;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
 }
-#myBtn:hover{
-    background: #606060 ; /* add a dark-grey background on hover */
+
+#myBtn:hover {
+    background: #606060;
 }
 
 /*////////////responsive/////////////////////*/
 
-@media(max-width:768){
-    .main_header{ height: 700px; text-align: center; }
+@media (max-width: 768px) {
+    .main_header {
+        height: 700px;
+        text-align: center;
+    }
 
-    .main_header h1{
+    .main_header h1 {
         text-align: center;
         padding: 0;
         width: 100%;
         font-size: 30px;
     }
-    .count_style{
-        display:inline!important;
+
+    .count_style {
+        display: inline!important;
     }
 
-    .count_style p{ text-align: center; }
+    .count_style p {
+        text-align: center;
+    }
 
-    .about_res{ margin-left: 0!important; }
+    .about_res {
+        margin-left: 0!important;
+    }
 }
 
 
@@ -378,5 +389,3 @@ padding: 80px 0;
     height: 81px;
     text-align: center;
     margin: 0 auto;
-
-</style>
